@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Estilização de elementos com classes e IDs */
+.classe-exemplo {
+    color: #007BFF;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#id-exemplo {
+    color: #FF5733;
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+#exemplo-complexo {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #555;
+    background-color: #e0f7fa;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+}
+
+.destaque {
+    color: #FF5733;
+    background-color: #FFF3E0;
+}
+
+/* Estilos de layout */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eaeaea;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box1 {
+    background-color: #ffddcc;
+    padding: 30px;
+    border: 5px solid #ff5733;
+    margin: 20px;
+}
+
+.box2 {
+    background-color: #ccffcc;
+    padding: 20px;
+    border: 3px solid #28a745;
+    margin: 10px;
+}
+
+.box3 {
+    background-color: #cce5ff;
+    border: 2px solid #007bff;
+}
+
+.box4 {
+    background-color: #f0f0f0;
+}
+
+.box5 {
+    background-color: #FFCDD2;
+    margin: 20px;
+    padding: 5px;
+    border: 2px solid #D32F2F;
+}
+
+.box6 {
+    background-color: #E1BEE7;
+    margin: 0;
+    padding: 0;
+    border: 8px solid #7B1FA2;
+}
+
+.box7 {
+    background-color: #BBDEFB;
+    margin: 10px;
+    padding: 20px;
+    border: 4px solid #1976D2;
+}
+
+.box8 {
+    background-color: #FFF9C4;
+    margin: 0;
+    padding: 0;
+    border: 2px dashed #FBC02D;
+}
+
+/* Estilos da página de Box Model */
+.box-model {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.exemplo1 {
+    background-color: #FFD700;
+}
+
+.exemplo2 {
+    background-color: #90EE90;
+    box-sizing: border-box;
+}
+
+/* Estilos de texto */
+p strong {
+    font-weight: bold;
+}
+
+p code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Texto centralizado */
+.texto-centralizado {
+    text-align: center;
+}
+
+/* Texto alinhado à direita */
+.texto-direita {
+    text-align: right;
+}
+
+/* Texto justificado */
+.texto-justificado {
+    text-align: justify;
+}
+
+/* Estilos para transformações de texto */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* Sombras no texto */
+.texto-sombra {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Opacidade */
+.opacidade {
+    opacity: 0.5;
+}
+
+/* Bordas no texto */
+.texto-borda {
+    border: 2px solid #333;
+    padding: 10px;
+}
+
+/* Espaçamento entre letras */
+.letras-espacadas {
+    letter-spacing: 3px;
+}
+
+/* Espaçamento entre palavras */
+.palavras-espacadas {
+    word-spacing: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+    position: relative;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Box Model</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cascata.html">Estilos em Cascata</a></li>
+                <li><a href="formatação.html">Formatação CSS</a></li>
+                <li><a href="box-model.html">Box Model</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Conceito de Box Model</h2>
+            <p>O Box Model no CSS define como os elementos da página são representados no layout. Cada elemento é envolvido em um "box" que inclui as seguintes propriedades:</p>
+            <ul>
+                <li><strong>Content (Conteúdo):</strong> A área onde o texto ou outro conteúdo é exibido.</li>
+                <li><strong>Padding (Preenchimento):</strong> Espaço entre o conteúdo e a borda.</li>
+                <li><strong>Border (Borda):</strong> A linha ao redor do conteúdo e do padding.</li>
+                <li><strong>Margin (Margem):</strong> Espaço externo ao redor da borda.</li>
+            </ul>
+
+            <h3>Exemplo Prático de Box Model</h3>
+            <p>Abaixo estão exemplos de boxes com diferentes configurações de margens, padding, bordas e cores para que você possa visualizar como o Box Model afeta o layout:</p>
+
+            <div class="box-container">
+                <div class="box box1">
+                    <p>Conteúdo + Padding + Borda + Margem</p>
+                </div>
+                <div class="box box2">
+                    <p>Conteúdo + Padding + Borda</p>
+                </div>
+                <div class="box box3">
+                    <p>Conteúdo + Borda</p>
+                </div>
+                <div class="box box4">
+                    <p>Somente Conteúdo</p>
+                </div>
+                <section>
+                    <h3>Exemplos Avançados de Box Model</h3>
+                    <div class="box-container">
+                        <div class="box box5">
+                            <p>Grande Margem Externa e Pequeno Padding Interno</p>
+                        </div>
+                        <div class="box box6">
+                            <p>Sem Margem e Sem Padding, mas com Borda Espessa</p>
+                        </div>
+                        <div class="box box7">
+                            <p>Padding e Borda Grandes, com Margem</p>
+                        </div>
+                        <div class="box box8">
+                            <p>Somente Borda e Conteúdo, sem Padding</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Desenvolvido por [Emanuely e Felipe]</p>
+    </footer>
+</body>
+</html>
